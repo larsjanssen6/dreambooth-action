@@ -1,4 +1,4 @@
-name: Train a model
+name: Paint my walls
 
 # This workflow is triggered manually from the GitHub website.
 # To run it, click the "Actions" tab on the repo page.
@@ -60,8 +60,8 @@ jobs:
           -H "Content-Type: application/json" \
           -d '{
                   "input": {
-                      "instance_prompt": "a photo of a ${{ inputs.prompt-identifier }} person",
-                      "class_prompt": "a photo of a person",
+                      "instance_prompt": "paint walls in color ${{ inputs.prompt-identifier }}",
+                      "class_prompt": "painted walls in given color",
                       "instance_data": "${{ steps.upload-training-data.outputs.INSTANCE_DATA_URL }}",
                       "max_train_steps": ${{ inputs.max-train-steps }}
                   },
